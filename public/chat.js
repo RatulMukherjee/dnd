@@ -1,6 +1,8 @@
 // Make connection
 var socket = io.connect('http://localhost:4000');
     $(document).ready(function () {
+        var d0 = $('#d0')[0];  
+        var d20 = $('#d20')[0];  
         if(localStorage.getItem('Handle')==undefined){
             $("#signup").modal('show');
         }
@@ -30,7 +32,13 @@ var socket = io.connect('http://localhost:4000');
         });
 
             socket.on('roll', function(data){
-                var str= '<p><strong>' + data.handle + ' has just rolled a D'+data.dice +'</strong> ' + data.roll + '</p>';
+                if (data.roll == 1 )
+                    d0.play(); 
+                else if(data.roll == 20)
+                    d20.play();   
+                    var time = new Date();
+                            
+                var str= '<p><i>'+time.getHours()+':'+time.getMinutes()+':'+time.getSeconds()+' - </i> <strong> ' + data.handle + ' has just rolled a D'+data.dice +'</strong> ' + data.roll + '</p>';
                 $("#output").append(str);
             });
 
