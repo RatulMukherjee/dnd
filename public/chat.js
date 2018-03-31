@@ -1,5 +1,5 @@
 // Make connection
-var socket = io.connect('http://localhost:4000');
+var socket = io.connect('http://18.219.189.12:4000');
     $(document).ready(function () {
         var d0 = $('#d0')[0];  
         var d20 = $('#d20')[0];  
