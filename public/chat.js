@@ -1,5 +1,9 @@
 // Make connection
-var socket = io.connect('http://18.219.189.12:4000');
+
+var url = "http://localhost:4000";
+
+ var socket = io.connect('http://18.219.189.12:4000');
+ //var socket = io.connect(url);
     $(document).ready(function () {
         var d0 = $('#d0')[0];  
         var d20 = $('#d20')[0];  
@@ -40,6 +44,8 @@ var socket = io.connect('http://18.219.189.12:4000');
                             
                 var str= '<p><i>'+time.getHours()+':'+time.getMinutes()+':'+time.getSeconds()+' - </i> <strong> ' + data.handle + ' has just rolled a D'+data.dice +'</strong> ' + data.roll + '</p>';
                 $("#output").append(str);
+                $('#chat-window').animate({scrollTop: $('#chat-window').prop("scrollHeight")}, 500);
+                //console.log("here");
             });
 
 

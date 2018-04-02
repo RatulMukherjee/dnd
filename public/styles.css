@@ -17,8 +17,8 @@ h2{
 }
 
 #chat-window{
-    height: 400px;
-    overflow: auto;
+    height: 400px; 
+    overflow: scroll;
     background: #f9f9f9;
 }
 
@@ -28,6 +28,8 @@ h2{
     border-bottom: 1px solid #e9e9e9;
     color: #555;
 }
+
+
 
 #feedback p{
     color: #aaa;
