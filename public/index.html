@@ -8,18 +8,10 @@
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <!-- <link href="/styles.css" rel="stylesheet" /> -->
+    <link href="/styles.css" rel="stylesheet" />
 
     <style>
-      #chat-window
-      {
-        height: 400px; 
-        overflow: scroll;
-        background: #f9f9f9;
-      }
-      .button-row{
-        margin: 10px;
-      }
+     
     </style>
 </head>
     
@@ -30,9 +22,9 @@
   <body>
     <audio src="pings/cow-moo.wav" type="audio/wav" id="d0"> </audio>
     <audio src="pings/cha-ching.wav" type="audio/wav" id="d20"> </audio>
-      <div class="container-fluid">
+      <div class="container-fluid " >
         <div class="row justify-content-center">
-          <div class="col-8">
+          <div class="col-8 opa ">
               <div  class="alert alert-light">
                   <div class="alert alert-primary" role="alert">
                     Roll Log    
@@ -41,25 +33,29 @@
                       <div id="output"></div>
                   </div>
                   <div class="row justify-content-center">
-                    <div class="col-10">
-                        <div class="button-row">
-                            <label>Roll-Count</label>
-                            <input type="number" name="noRolls" id="noRolls" value=1>
-                            <button class="btn btn-success" id="d4">Roll D4</button>
-                            <button class="btn btn-success" id="d6">Roll D6</button>
-                            <button class="btn btn-success" id="d8">Roll D8</button>
-                            <button class="btn btn-success" id="d10">Roll D10</button>
-                            <button class="btn btn-success" id="d12">Roll D12</button>
-                            <button class="btn btn-success" id="d20">Roll D20</button>
+                    <div class="col-4">
+                      <div class="form-group top"> 
+                          <label>Roll-Count</label>
+                          <input type="number" name="noRolls" id="noRolls" value=1>
+                      </div>
+                      </div>
+                      <div class="col-8">
+                            <div class="button-row">
+                                <button class="btn btn-success space" id="d4">Roll D4</button>
+                                <button class="btn btn-success space" id="d6">Roll D6</button>
+                                <button class="btn btn-success space" id="d8">Roll D8</button>
+                                <button class="btn btn-success space" id="d10">Roll D10</button>
+                                <button class="btn btn-success space" id="d12">Roll D12</button>
+                                <button class="btn btn-success space" id="d20">Roll D20</button>
+                                <button class="btn btn-danger space" id="clear">Clear</button>
+                                <button class="btn btn-info space" id="change">Change</button>
+                            </div>
+
                         </div>
+                        
                     </div>
                   </div>
-                <div class="row">
-                    <div class="button-row">
-                      <button class="btn btn-danger" id="clear">Clear</button>
-                    </div>
-
-                </div>
+               
              
           </div>
 

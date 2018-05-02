@@ -1,2 +1,1 @@
-# websockets-playlist
-All the course files for the WebSockets playlist on The Net Ninja YouTube channel.
+This is a Dungeons and Dragons dice app. Host it online and have your friends join to have a fun time with your DnD rolls!

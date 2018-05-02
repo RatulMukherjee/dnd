@@ -1,8 +1,7 @@
 // Make connection
 
-var url = "http://localhost:4000";
-
- //var socket = io.connect('http://18.219.189.12:4000');
+//var url = "http://localhost:4000";
+  var url = "http://18.219.189.12:4000";
  var socket = io.connect(url);
     $(document).ready(function () {
         var d0 = $('#d0')[0];  
@@ -23,6 +22,12 @@ var url = "http://localhost:4000";
        
            
        });
+       
+       $("#change").click(function (e) { 
+           e.preventDefault();
+           $("#signup").modal('show');
+           
+       });
 
         $(".btn-success").click(function (e) { 
             e.preventDefault();
@@ -32,7 +37,7 @@ var url = "http://localhost:4000";
 
               if (localStorage.getItem('token') =="DM")
               {
-                  for(i=0; i<$("noRolls").val(); i++ )
+                  for(i=0; i<= $("noRolls").val(); i++ )
                   {
                     data= { dice: roll_count, roll:Math.floor((Math.random() * parseInt(roll_count)) + 1),handle: localStorage.getItem('Handle') };
                     showRoll(data);
@@ -42,7 +47,7 @@ var url = "http://localhost:4000";
 
               }
               else{
-                for(i=0 ; i = $("#noRolls").val() -1 ; i++ )
+                for(i=0 ; i<= $("#noRolls").val() -1 ; i++ )
                 {
                     socket.emit('roll', {
                         dice: roll_count,
